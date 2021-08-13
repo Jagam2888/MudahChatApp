@@ -4,7 +4,7 @@ MudahChat App
 2. PreLoad Chat Messages Saved in assets folder(chat.json)
 3. Using Retrofit Web Service for post message API.("https://reqres.in/api/users").
 4. All Messages stored in local Room Database.
-5. bind all data using Databinding
+5. used Databinding concept
 
 
 Configuration Setup : 
