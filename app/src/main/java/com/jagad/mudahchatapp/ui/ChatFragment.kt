@@ -66,7 +66,6 @@ class ChatFragment : Fragment(R.layout.fragment_chat),KodeinAware,SimpleListener
                 is Resource.Success -> {
                     hide(chatBinding.progressCircular)
                     activity?.hideKeyBoard()
-                    context?.toast(response.message!!)
                 }
                 is Resource.Failure -> {
                     hide(chatBinding.progressCircular)
