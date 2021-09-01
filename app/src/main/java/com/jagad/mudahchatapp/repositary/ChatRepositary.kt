@@ -6,11 +6,12 @@ import com.jagad.mudahchatapp.model.request.ChatRequest
 import com.jagad.mudahchatapp.Data.local.Chat
 import com.jagad.mudahchatapp.model.response.ChatPostMessageResponse
 import com.jagad.mudahchatapp.network.SafeApiRequest
+import javax.inject.Inject
 
 /**
  * Created by jagad on 8/10/2021
  */
-class ChatRepositary(
+class ChatRepositary @Inject constructor(
     private val api:ChatPostService,
     private val database:ChatDatabase
 ):SafeApiRequest() {

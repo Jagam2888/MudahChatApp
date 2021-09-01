@@ -1,25 +1,26 @@
 package com.jagad.mudahchatapp.ui.viewmodel
 
 import androidx.databinding.ObservableField
-import androidx.databinding.ObservableInt
 import androidx.lifecycle.*
 import com.google.gson.Gson
 import com.jagad.mudahchatapp.listener.SimpleListener
 import com.jagad.mudahchatapp.model.request.ChatRequest
 import com.jagad.mudahchatapp.Data.local.Chat
-import com.jagad.mudahchatapp.model.response.ChatPostMessageResponse
 import com.jagad.mudahchatapp.model.response.ChatResponse
 import com.jagad.mudahchatapp.network.Resource
 import com.jagad.mudahchatapp.repositary.ChatRepositary
 import com.jagad.mudahchatapp.repositary.MessageRepositary
 import com.jagad.mudahchatapp.utils.*
+import dagger.hilt.android.lifecycle.HiltViewModel
 
 import kotlinx.coroutines.*
+import javax.inject.Inject
 
 /**
  * Created by jagad on 8/10/2021
  */
-class ChatViewModel(
+@HiltViewModel
+class ChatViewModel @Inject constructor(
     private val chatRepositary: ChatRepositary,
     private val messageRepositary: MessageRepositary
 ):ViewModel() {

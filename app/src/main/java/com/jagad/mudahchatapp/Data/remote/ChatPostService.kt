@@ -15,12 +15,4 @@ interface ChatPostService {
 
     @POST("users")
     suspend fun postChatMessage(@Body chatRequest: ChatRequest) : Response<ChatPostMessageResponse>
-
-    companion object{
-        operator fun invoke(
-            context: Context
-        ):ChatPostService{
-            return RetrofitClientInstance(context).create(ChatPostService::class.java)
-        }
-    }
 }
